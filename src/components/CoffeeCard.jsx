@@ -1,6 +1,7 @@
 import { FaEye } from "react-icons/fa";
 import { FaPen } from "react-icons/fa6";
 import { MdDelete } from "react-icons/md";
+import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const CoffeeCard = ({ coffee }) => {
@@ -53,7 +54,9 @@ const CoffeeCard = ({ coffee }) => {
                 </div>
                 <div className="join join-vertical gap-3">
                     <button className="btn join-item bg-[#D2B48C]"><FaEye className="text-white text-xl" /></button>
+                    <Link to={`updateCoffee/${_id}`}>
                     <button className="btn join-item bg-[#3C393B]"><FaPen className="text-white text-xl" /></button>
+                    </Link>
                     <button 
                     onClick={() => handleDelete(_id)}
                     className="btn join-item bg-[#EA4744]"><MdDelete className="text-white text-xl" /></button>
